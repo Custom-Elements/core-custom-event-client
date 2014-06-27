@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>core-custom-event-client</title>
+    <script src="http://localhost:35729/livereload.js"></script>
+    <script src="node_modules/polymer/platform.js"></script>
+    <link rel="import" href="node_modules/polymer/polymer.html">
+    <link rel="import" href="build/core-custom-event-client.html">
+    <style>
+      body {
+        font-family: "Helvetica Neue", "Helvetica", Arial;
+      }
+    </style>
+  </head>
+  <body unresolved>
+    <div id="holder">
+      <core-custom-event-client servers='ws://localhost:10001' onboop='this.server.fire("woot"); console.log("woot")'>
+      </core-custom-event-client>
+    </div>
+    <script>
+      document.addEventListener('polymer-ready', function() {
+        var c = document.querySelector('core-custom-event-client');
+        c.addEventListener('hello', function() {
+          c.server.fire('beep');
+        })
+      })
+    </script>
+  </body>
+</html>
