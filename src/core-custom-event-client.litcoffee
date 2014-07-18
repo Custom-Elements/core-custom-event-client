@@ -2,7 +2,7 @@
 This connects to [https://github.com/wballard/custom-event-server](), learn
 all about it there.
 
-    HuntingWebSocket = require 'hunting-websocket'
+    {AwesomeWebSocket} = require 'awesome-websocket'
     Polymer 'core-custom-event-client',
 
 ##Events
@@ -21,7 +21,7 @@ side failover behavior when there is more than one server, but automatic
 reconnection is always supported.
 
       serversChanged: ->
-        @socket = new HuntingWebSocket @servers.split(' ')
+        @socket = new AwesomeWebSocket @servers.split(' ')
         @socket.onmessage = (evt) =>
           try
             message = JSON.parse(evt.data)

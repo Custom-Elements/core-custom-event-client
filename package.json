@@ -2,7 +2,7 @@
   "name": "core-custom-event-client",
   "version": "0.0.0",
   "dependencies": {
-    "hunting-websocket": "^0.0.3",
+    "awesome-websocket": "0.0.11",
     "polymer": "git://github.com/custom-elements/polymer#master",
     "polymer-build": ""
   },
