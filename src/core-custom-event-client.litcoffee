@@ -2,7 +2,7 @@
 This connects to [https://github.com/wballard/custom-event-server](), learn
 all about it there.
 
-    {AwesomeWebSocket} = require 'awesome-websocket'
+    AwesomeWebSocket = require 'awesome-websocket/src/reconnecting-websocket.litcoffee'
     Polymer 'core-custom-event-client',
 
 ##Events
