@@ -3,6 +3,14 @@ This connects to [https://github.com/wballard/custom-event-server](), learn
 all about it there.
 
     AwesomeWebSocket = require 'awesome-websocket/src/reconnecting-websocket.litcoffee'
+
+###keepAlive Timeout
+The timeout sent to AwesomeWebSocket that specifies the rate (in ms) we ping the server to keep the socket alive
+
+    keepAliveTimeout = 30000
+
+Call to Polymer
+
     Polymer 'core-custom-event-client',
 
 ##Events
@@ -10,9 +18,6 @@ This element fires a dynamic set of events based on what the server fires.
 
 ###hello
 Fired on a connection or reconnection.
-
-###pong
-Fired when the server responds to your `ping`.
 
 ##Attributes and Change Handlers
 ###servers
@@ -35,6 +40,8 @@ reconnection is always supported.
             @socket.send JSON.stringify
               type: type
               detail: detail
+
+        @socket.keepAlive(keepAliveTimeout,"ping")
 
 ##Methods
 
