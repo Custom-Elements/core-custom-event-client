@@ -41,7 +41,6 @@ reconnection is always supported.
               type: type
               detail: detail
 
-        @socket.setLoopType(setTimeout)
         @socket.keepAlive(keepAliveTimeout,"ping")
 
 ##Methods
