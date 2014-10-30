@@ -1,5 +1,5 @@
 #core-custom-event-client
-This connects to [https://github.com/wballard/custom-event-server](), learn
+This connects to [server](https://github.com/wballard/custom-event-server), learn
 all about it there.
 
     AwesomeWebSocket = require 'awesome-websocket/src/reconnecting-websocket.litcoffee'
