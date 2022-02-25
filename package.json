@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "awesome-websocket": "0.0.24",
-    "polymer": "git://github.com/custom-elements/polymer#master",
+    "polymer": "git+https://github.com/custom-elements/polymer#master",
     "polymer-build": ""
   },
   "license": "ISC",
